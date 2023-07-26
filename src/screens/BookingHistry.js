@@ -14,8 +14,8 @@ export default class BookingHistry extends Component{
             <div>
                 <SceensHeader/>
                 <div style={{fontSize:20,fontWeight:'600',color:'#0F172A',padding:10,paddingLeft:30,borderBottom:'1px solid #E2E8F0'}}>Bookings</div>
-                <div style={{display:'flex',width:'100%',marginTop:10}}>
-                    <div style={{flexDirection:'column',display:'flex'}}>
+                <div style={{display:'flex',width:'90%',marginTop:10}}>
+                    <div style={{flexDirection:'column',display:'flex',width:'25%'}}>
                         <label style={{fontSize:14,fontWeight:'600',color:'#0F172A',paddingLeft:20}}>All Booking</label>
                         <button onClick={()=>this.setState({activeBt:'active_booking'})} style={{height:29,fontSize:14,fontWeight:'600',border:0,color:'#0F172A',borderLeft:this.state.activeBt =='active_booking'? '4px solid #F15A29':'white'}}>Active Bookings</button>
                         <button onClick={()=>this.setState({activeBt:'cancel_booking'})} style={{height:29,fontSize:14,fontWeight:'600',border:0,color:'#0F172A',borderLeft:this.state.activeBt =='cancel_booking'? '4px solid #F15A29':'white'}}>Canceled Bookings</button>

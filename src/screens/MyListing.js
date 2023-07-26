@@ -8,7 +8,7 @@ export default class MyListing extends Component {
         <div>
             <SceensHeader/>
             <UserProfile/>
-            <ListingList/>
+           <div > <ListingList/></div>
         </div>
     )
   }

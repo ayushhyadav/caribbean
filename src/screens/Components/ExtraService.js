@@ -13,7 +13,7 @@ export default class ExtraService extends Component {
         <label>
         Amenties
         </label>
-        <ul style={{ listStyleType:'none',padding:0,margin:0,display:'flex',flexDirection:'row',justifyContent:'space-between',width:'80%'}}>
+        <ul style={{ listStyleType:'none',padding:0,margin:0,display:'flex',justifyContent:'space-between',width:'80%'}}>
            
         <li style={{background:'#F3F4F6',width:'6%',height:25,borderRadius:5,textAlign:'center',color:'#6B7280',fontSize:14}}>
                 Wifi

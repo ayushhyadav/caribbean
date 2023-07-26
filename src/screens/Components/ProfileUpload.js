@@ -11,7 +11,7 @@ export default class ProfileUpload extends Component{
     render(){
         return(
              <div style={{width:'75%',padding:20}}>
-          <label style={{marginLeft:20}}>Step 1/8</label>
+          <label style={{marginLeft:20}}>Step 2/8</label>
           <h4 style={{fontSize:25,fontWeight:'700',marginLeft:20}}>Upload Profile Picture</h4>
           <label style={{fontSize:13,fontWeight:'400',color:'#0F172A',marginLeft:20}}>Lorem ipsum dolor sit emet conseteur</label>
           <div style={{textAlign:'center',height:'40%',borderWidth:1,border:'dotted',borderColor:'#E2E8F0',marginTop:10,display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>

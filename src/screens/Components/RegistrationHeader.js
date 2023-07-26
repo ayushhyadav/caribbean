@@ -10,19 +10,19 @@ export default class RegistrationHeader extends Component {
     }
   render() {
     return (
-        <nav style={{borderBottom:'1px solid #E5E7EB'}} class="navbar navbar-expand-lg navbar-white  ">
-        <div style={{width:'90%'}} class="container-fluid">
-        <img style={{width:20,height:20,}} alt=''
+        <nav style={{borderBottom:'1px solid #E5E7EB'}} className="navbar navbar-expand-lg navbar-white  ">
+        <div style={{width:'90%',height:70}} className="container-fluid">
+        <img style={{width:40,height:38,}} alt=''
                           src={require('../Image/Group1.png')}
                         />
-          <a style={{color:'#F15A29',fontSize:15,fontWeight:'bold',marginLeft:5 }} class="navbar-brand" href="/">CARIBBEANEAZE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <a style={{color:'#F15A29',fontSize:25,fontWeight:'bold',marginLeft:5 }} className="navbar-brand" href="/">CARIBBEANEAZE</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div style={{justifyContent:'flex-end'}} class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div style={{justifyContent:'flex-end'}} className="collapse navbar-collapse" id="navbar">
             
            
-              <button  class=" me-2 btn btn-outline-dark " type="submit">Become a User</button>
+              <button  className=" me-2 btn btn-outline-dark " type="submit">Become a User</button>
 
           </div>
         </div>

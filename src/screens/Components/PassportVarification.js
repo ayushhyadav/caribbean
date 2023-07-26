@@ -22,24 +22,28 @@ export default class PassportVerification extends Component {
     const { value, options } = this.state;
    console.log('options ',options)
     return (
-      <div style={{ width: '60%', padding: 20, justifyContent: 'center' }}>
+      <div style={{ width: '60%', padding: 30, justifyContent: 'center' }}>
         <label style={{ marginLeft: 20 }}>Step 4/8</label>
-        <h4 style={{ fontSize: 25, fontWeight: '700', marginLeft: 20 }}>Passport/ID Verification</h4>
-        <label style={{ fontSize: 13, fontWeight: '400', color: '#0F172A', marginLeft: 20 }}>
+        <h4 style={{ fontSize: 30, fontWeight: '700', marginLeft: 20,color:'#000000' }}>Passport/ID Verification</h4>
+        <label style={{ fontSize: 16, fontWeight: '400', width: '70%', color: '#0F172A', marginLeft: 20 }}>
           Upload a government-issued ID that clearly shows your full name and complete photo. The document must be a
           cleared high-resolution color copy of the complete (uncropped) original document with no information obscured
           by the camera's flash.
         </label>
-        <div style={{ width: '100%', height: '100%' }}>
-          <label style={{ marginLeft: 20 }}>Country</label>
+        <div style={{ width: '80%', height: '40%', padding:20 }}>
+          <label style={{ color:'#474554'}}>Country</label>
           <br />
-          <Select options={options} value={value} onChange={this.changeHandler} />
+          <Select 
+          
+           options={options} value={value} onChange={this.changeHandler} />
           <br />
 
           <input type="radio" /> Passport <br />
           <input type="radio" /> National ID <br />
 
-          <div
+          
+        </div>
+        <div
             style={{
               display: 'flex',
               flexDirection: 'row',
@@ -58,7 +62,6 @@ export default class PassportVerification extends Component {
               Next
             </button>
           </div>
-        </div>
       </div>
     );
   }

@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
+import Calander from './Calander';
 // import Calendar from 'react-calendar';
 // import 'react-calendar/dist/Calendar.css'; 
 const Data=[
     {
         title:'Balance',
-        value:'$310'
+        value1:'$310'
     },
     {
         title:'Active Jobs',
-        value:'4 Jobs ($200)'
+        job:"4jobs",
+        value:'($200)'
     },
     {
         title:'Earned this Month',
-        value:'$400'
+        job:'$400'
     },
     {
         title:'Expected Earning',
-        value:'$280'
+        job:'$280'
     }
 
 ]
@@ -36,25 +38,28 @@ export default class JobsDetailes extends Component {
     
   render() {
     return (
-      <div>
-        <label style={{fontSize:20,fontWeight:'bold'}}>Stats</label>
-        <div>
+      <div style={{marginTop:20}}>
+     
+        <div style={{}}>
+        <label style={{fontSize:21,fontWeight:'600',marginLeft:25}}>Stats</label>
             {Data.map((Data)=>(
-                <ul style={{listStyleType:'none',display:'flex',justifyContent:'space-between'}}>
+                <ul style={{listStyleType:'none',display:'flex',justifyContent:'space-between',marginTop:20}}>
                 <div>
-                <li style={{fontSize:20,fontWeight:'bold',color:'#0F172A'}}>
+                <li style={{fontSize:23,fontWeight:'450',color:'#0F172A',marginTop:10}}>
                     {Data.title}
                 </li>
-                
-                <li style={{fontSize:18,color:'#0F172A'}}>{Data.value}</li>
+                <div style={{display:'flex',marginTop:15}}>
+                  <label style={{fontSize:18,}}>{Data.job}</label>
+                  <li style={{fontSize:28,fontWeight:'600',color:'#047857'}}>{Data.value1}</li>
+                <li style={{fontSize:18,color:'#047857'}}>{Data.value}</li>
+                </div>
                 </div>
                 </ul>
             ))}
            
         </div>
         <div className="my-calendar" style={{width:'70%'}}>
-        {/* <Calendar  
-        className="custom-calendar" onChange={this.onChange} value={this.state.value} /> */}
+      <Calander/>
     </div>
         
   

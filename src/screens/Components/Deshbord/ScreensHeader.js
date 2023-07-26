@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 export default class RegistrationHeader extends Component {
 
     constructor(props) {
@@ -23,20 +23,20 @@ export default class RegistrationHeader extends Component {
                                 <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Booking History</a>
+                                <a class="nav-link" href="/booking">Booking History</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Earning</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/">My Listing</a>
+                                <a class="nav-link" href="/mylisting">My Listing</a>
                             </li>
 
                         </ul>
                     </div>
 
                     <div style={{ justifyContent: 'flex-end', }} class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <img src={require('../../../assets/sms.png')} alt=''/>
+                     <Link to='/ClientProfile' >  <img src={require('../../../assets/sms.png')} alt=''/></Link> 
                         <img style={{marginLeft:15}} src={require('../../../assets/notification.png')} alt=''/>
                         <button style={{marginLeft:15,height:48}} class=" me-2 btn btn-outline-dark " type="submit">Become a User</button>
                         
