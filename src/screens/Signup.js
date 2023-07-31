@@ -15,7 +15,7 @@ export default function Signup() {
        <div className='detail' style={{padding:10}}>
         <div style={{flexDirection:'row',display:'flex',marginTop:30,textAlign:'center',alignItems:'center',justifyContent:'space-between',}}>
         <div style={{flexDirection:'row',display:'flex',alignItems:'center',justifyContent:'center'}}>
-        <img style={{width:30,height:25,marginTop:11}} src={logo}  alt=''/>
+        <img style={{width:30,height:25,marginTop:11,backgroundRepeat:'no-repeat'}} src={logo}  alt=''/>
         <h5 style={{color:'white'}}>CARIBBEANEAZE</h5>
         </div>
          <div style={{flexDirection:'row',display:'flex'}}>

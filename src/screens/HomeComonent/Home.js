@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Crousel from './Crousel'
 import ScrollDestination from './ScrollDestination'
 import Card from './Card'
+import './Home.css'
+
 
 export default class Home extends Component {
   render() {
@@ -10,9 +12,7 @@ export default class Home extends Component {
       <div style={{width:'100%',height:'100%'}}>
         <HomeHeader/>
         <Crousel/>
-       <ScrollDestination/>
-      
-      
+        <ScrollDestination/>
         <Card/> 
    
       </div>

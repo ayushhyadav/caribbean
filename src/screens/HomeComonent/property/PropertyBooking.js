@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 const Order = [
   {
     item: 'Rafting'
@@ -89,7 +90,7 @@ export default class PropertyBooking extends Component {
 
                                         </div>
                                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 15,width:'100%' }}>
-                                          <button style={{ width: '100%', fontSize: 14, height: 45, color:'white',fontSize:18,borderRadius: 10, background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)' }}> Book</button>
+                                        <Link to="/Checkout">  <button style={{ width: '100%', fontSize: 14, height: 45, color:'white',fontSize:18,borderRadius: 10, background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)' }}> Book</button></Link>
                                         </div>
                                       </div>
                                     </div>

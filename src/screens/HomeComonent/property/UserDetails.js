@@ -144,7 +144,8 @@ Located in Pacific Palisades, a quiet, laid-back neighbourhood tucked between Sa
 {Extra.map((Extra) => (
        <ul style={{ listStyleType:'none',padding:0,margin:0, width:'23%',alignItems:'center',textAlign:'center',display:'flex',justifyContent:'center'}}>
 
-<li style={{background:'#F3F4F6',width:'80%',height:40,borderRadius:5,textAlign:'center',color:'#6B7280',fontSize:13,display:'flex',alignItems:'center',justifyContent:'center'}}>{Extra.item}</li>
+<li style={{background:'#F3F4F6',width:'80%',height:40,borderRadius:5,textAlign:'center',color:'#6B7280',fontSize:13,display:'flex',alignItems:'center',justifyContent:'center'}}>
+  {Extra.item}</li>
 
 
 

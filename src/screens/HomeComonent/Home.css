@@ -1,29 +1,32 @@
-.Main {
-    display: grid;
-    justify-content: center;
-    place-items: center;
-    width: 100%;
-
-    grid-auto-rows: 420px;
-    grid-template-columns: repeat(4, 280px);
-    grid-gap: 20px;
-
-    /* Mobile */
-    @media only screen and (max-width: 767px) {
-        grid-template-columns: repeat(2, 50%);
-        grid-gap: 0;
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    /* Example: Set a minimum width for the Crousel */
+    .carousel-container {
+      min-width: 50%;
+      margin: 0 auto;
     }
-
-    /* Tablets */
-
-    @media only screen and (min-width: 767px) and (max-width: 1200px) {
-        grid-template-columns: repeat(3, 30%);
+  
+    /* Example: Adjust font size for the HomeHeader */
+    .home-header {
+      font-size: 24px;
     }
-
-    @media only screen and (min-width: 767px) {
-        margin-top: -130px;
-        padding: 10px 0px;
+  
+    /* Add other responsive styles for larger screens here */
+  }
+  
+  /* Styles for smaller screens */
+  @media (max-width: 767px) {
+    /* Example: Center the Crousel and set its width to 100% */
+    .carousel-container {
+      width: 100%;
+      margin: 0 auto;
     }
-
-    ;
-}
+  
+    /* Example: Adjust font size for the HomeHeader */
+    .home-header {
+      font-size: 20px;
+    }
+  
+    /* Add other responsive styles for smaller screens here */
+  }
+  

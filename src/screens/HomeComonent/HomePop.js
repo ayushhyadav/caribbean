@@ -294,7 +294,7 @@ export default class HomePop extends Component {
 {Feature.map((Feature) => (
        <ul style={{ listStyleType:'none',width:"50%",}}>
 
-<li style={{background:'#F3F4F6',width:'100%',height:30,borderRadius:5,color:'#6B7280',fontSize:14,textAlign:'center'}}>{Feature.item}</li>
+<li style={{background:'#F3F4F6',width:'100%',height:35,borderRadius:5,color:'#6B7280',fontSize:14,textAlign:'center'}}>{Feature.item}</li>
 
 
 

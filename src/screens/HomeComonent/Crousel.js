@@ -7,7 +7,56 @@ export default class Crousel extends Component{
         super(props)
         this.state={
             list:[
-              1,2,3,4,5,6,7,8,9,10,11,12,13,
+              {
+                img: require('../../assets/Country.png'),
+                title:'Antigua',
+              },
+              {
+                img: require('../../assets/bahamas.png'),
+                title:'bahamas',
+              },
+              {
+                img: require('../../assets/barbados.png'),
+                title:'barbados',
+              },
+              {
+                img: require('../../assets/cuba.png'),
+                title:'Cuba',
+              },
+              {
+                img: require('../../assets/dominican republic.png'),
+                title:'Dominican',
+              },
+              {
+                img: require('../../assets/grenada.png'),
+                title:'grenada',
+              },
+              {
+                img: require('../../assets/haiti.png'),
+                title:'Haiti',
+              },
+              {
+                img: require('../../assets/Mask group.png'),
+                title:'Saint Kitts ',
+              },
+              {
+                img: require('../../assets/jamaica.png'),
+                title:'Jamaica',
+              },
+              {
+                img: require('../../assets/st lucia.png'),
+                title:'Saint Lucia ',
+              },
+              {
+                img: require('../../assets/st vincent and the grenadines.png'),
+                title:'Saint Vincent ',
+              },
+
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              
             ]
         }
             
@@ -21,40 +70,40 @@ export default class Crousel extends Component{
     
         return(
            <div style={{ height:'100%',width:'100%',}}>
-            <div style={{display:'flex', width:'50%',justifyContent:'center',alignItems:'center'}}>
-                {this.state.list.map((value,index)=>
-                    <div style={{flexDirection:'column',marginLeft:20,display:'flex',alignItems:'center',justifyContent:'center'}}>
-                    <img style={{width: 25,  height: 25,top: 127,left: 112 }}
+            <div style={{display:'flex', width:'90%',justifyContent:'space-between',alignItems:'center',margin:'0 auto',marginTop:10}}>
+            {this.state.list.map((list) => (
+                    <div style={{flexDirection:'column',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+                    <img style={{width: 35,  height: 35,}}
     
-                      src={require('../../assets/Country.png')} alt="logo"
+                      src={list.img} alt="logo"
                     />
-                    <label style={{fontSize:12}}>{'Antigua'}</label><br/>
+                    <label style={{fontSize:15}}>{list.title}</label><br/>
             
                 </div>
                     
                  
-                )}
-                <button style={{borderWidth:1,border:'solid'}} onClick={(value)=>{this.paginateNxtValue(this.state.currentPage + 1)}}>
+                ))}
+                {/* <button style={{borderWidth:1,border:'solid'}} onClick={(value)=>{this.paginateNxtValue(this.state.currentPage + 1)}}>
                     <label>Click me</label>
-                </button>
+                </button> */}
             </div>
             
 
 <div style={{position:'relative',justifyContent:'center',display:'flex'}}>
    
-<img style={{width:'100%'}} src={require('../../assets/Rectangle1.png')}/>
+<img style={{width:'100%'}} src={require('../../assets/Rectangle1.png')} alt=""/>
      
 
 <div  style={{position: 'absolute',width:'80%', bottom: '38%' }}>
 <h1 style={{color:'#FFFFFF',fontSize:50, }}>Lets Book your<br/> 
              dream Carribean Trip</h1>
                 
- <div style={{backgroundColor: '#FFFFFF',width:'100%',height:80,display:'flex',borderRadius:10,justifyContent:'center',marginTop:20}}>         
+ <div style={{backgroundColor: '#FFFFFF',width:'100%',height:90,display:'flex',borderRadius:10,justifyContent:'center',marginTop:20}}>         
 <div style={{width:'97%',display:'flex',alignItems:'center' ,justifyContent:'space-between',marginTop:10}}>
     <div>
         <span>Select Carribean Country</span>
         <div style={{display:'flex'}}>
-            <img style={{width:23,height:23}} src={require('../../assets/Country.png')}/>
+            <img style={{width:23,height:23}} src={require('../../assets/Country.png')} alt=""/>
             <h5>Antigua</h5>
         </div>
     </div>
@@ -80,7 +129,7 @@ export default class Crousel extends Component{
     <h5>Add Dates</h5>
     </div>
     <button style={{backgroundColor:'#F15A29',borderRadius:25,height:50,width:50,border:'none'}}>
-        <img src={require('../../assets/search-normal.png')} style={{width:30,height:30,}} alt="logo"/>
+        <img src={require('../../assets/search-normal.png')} style={{width:25,height:25,}} alt="logo"/>
     </button>
 </div>
 
@@ -129,4 +178,3 @@ export default class Crousel extends Component{
                   }
     
                 }
-            
