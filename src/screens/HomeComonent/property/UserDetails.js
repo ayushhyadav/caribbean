@@ -72,18 +72,30 @@ const Feature=[
 ]
 
 export default class UserDetails extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rating: [1, 2, 3, 4, 5]
+    };
+  }
   render() {
     return (
       <div style={{width:'80%'}}>
       <div style={{display:'flex',justifyContent:"space-between",width:'93%'}}>
          <div style={{display:'flex',padding:10,margin:1}}>
          <h1>Latimer Grand Oaks</h1>
-          <label style={{padding:10,marginLeft:20}}>122 (5.0)</label>
+         <div style={{ display: 'flex', alignItems: 'center',padding:10,marginLeft:20 }}>
+                {this.state.rating.map((val, index) =>
+                  <img key={index} style={{ width: 16, height: 16 }} src={require('../../../assets/Vector(1).png')} alt='' />
+                )}
+<label style={{marginLeft:5}}>122 (5.0)</label>
+              </div>
+          
          
          </div>
          <div style={{marginTop:15}}>
           <img  src={require('../../../assets/Vector2.png')}/>
-          <label>Beach View</label>
+          <label style={{color:'#F15A29',marginLeft:5}}>Beach View</label>
          </div>
       </div>
       <div style={{textAlign:'center',width:'27%',marginTop:1, display:'flex',padding:10}}>

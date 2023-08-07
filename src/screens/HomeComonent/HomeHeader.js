@@ -16,7 +16,7 @@ export default class HomeHeader extends Component {
                 <div style={{ width: '90%' ,height:70,justifyContent:'space-between'}} class="container-fluid">
                    <div>
                    <img style={{ width: 40, height: 35, }} alt='' src={require('../Image/Group1.png')} />
-                    <a style={{ color: '#F15A29', fontSize: 25, fontWeight: 'bold', marginLeft: 5,fontFamily:'cursive' ,width:'20%'}} class="navbar-brand" href="/">CARIBBEANEAZE</a>
+                    <a style={{ color: '#F15A29', fontSize: 25, fontWeight: 'bold', marginLeft: 5,fontFamily:'cursive'}} class="navbar-brand" href="/">CARIBBEANEAZE</a>
                    </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,10 @@ export default class HomeHeader extends Component {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a style={{fontSize:18,fontWeight:'500',width:'5'}} class="nav-link active" aria-current="page" href="/MyBooking">My Booking</a>
+                                <a style={{fontSize:18,fontWeight:'500',width:200,display:'flex',justifyContent:'flex-end'}} class="nav-link active" aria-current="page" href="/MyBooking">My Booking</a>
                             </li>
                             <li class="nav-item">
-                                <a style={{fontSize:18,fontWeight:'500',width:'5'}} class="nav-link" href="/EmailSupport">Support</a>
+                                <a style={{fontSize:18,fontWeight:'500',width:120,justifyContent:'flex-end',display:'flex'}} class="nav-link" href="/EmailSupport">Support</a>
                             </li>
                            
 

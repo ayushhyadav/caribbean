@@ -10,9 +10,9 @@ export default class User extends Component {
 
   render() {
     return (
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center',marginTop:'40px',height:"120px" ,}}>
-        <div style={{ width: '80%',display:'flex',justifyContent:'space-between'}}>
-          <div style={{ display: 'flex',width:'50%', alignItems: 'center', marginBottom: 20 ,}}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '40px', height: "120px", }}>
+        <div style={{ width: '80%', display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', width: '50%', alignItems: 'center', marginBottom: 20, }}>
             <img style={{ width: 80, height: 80, borderRadius: 40 }} src={require('../../../assets/Ellipse 11 (1).png')} alt='' />
             <div style={{ marginLeft: 20, display: 'flex', flexDirection: 'column' }}>
               <label style={{ fontSize: 23, fontWeight: '700', color: '#0F172A' }}>John Doe</label>
@@ -24,13 +24,13 @@ export default class User extends Component {
                 <label style={{ color: '#64748B', fontSize: 17, fontWeight: '600' }}>(200)</label>
               </div>
             </div>
-            <div style={{ display: 'flex', justifyContent:'end',width:'28%' , marginBottom: 20 }}>
-            <button style={{ height: 44,width:'75%', fontSize: 15, fontWeight: '600', color: '#0F172A', border: '1px solid', borderColor: '#0F172A', alignItems: 'center', justifyContent: 'center' }} className="me-2 btn btn-outline-dark" type="submit">View Location</button>
+            <div style={{ display: 'flex', justifyContent: 'end', width: '28%', marginBottom: 20 }}>
+              <button style={{ height: 44, width: '75%', fontSize: 15, fontWeight: '600', color: '#0F172A', border: '1px solid', borderColor: '#0F172A', alignItems: 'center', justifyContent: 'center' }} className="me-2 btn btn-outline-dark" type="submit">View Location</button>
+            </div>
           </div>
-          </div>
-         
+
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <button style={{ height: 50, borderRadius: 10, fontSize: 18,width:130 ,fontWeight: '600', backgroundColor: 'black', color: 'white' }} className="me-2 btn btn-outline-dark" type="submit">
+            <button style={{ height: 50, borderRadius: 10, fontSize: 18, width: 130, fontWeight: '600', backgroundColor: 'black', color: 'white' }} className="me-2 btn btn-outline-dark" type="submit">
               Message
             </button>
           </div>

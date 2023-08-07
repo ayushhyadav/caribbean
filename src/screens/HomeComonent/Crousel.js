@@ -95,8 +95,8 @@ export default class Crousel extends Component{
      
 
 <div  style={{position: 'absolute',width:'80%', bottom: '38%' }}>
-<h1 style={{color:'#FFFFFF',fontSize:50, }}>Lets Book your<br/> 
-             dream Carribean Trip</h1>
+<h1 style={{color:'#FFFFFF',fontSize:50, }}>A Free Mind To your Journey<br/> 
+             </h1>
                 
  <div style={{backgroundColor: '#FFFFFF',width:'100%',height:90,display:'flex',borderRadius:10,justifyContent:'center',marginTop:20}}>         
 <div style={{width:'97%',display:'flex',alignItems:'center' ,justifyContent:'space-between',marginTop:10}}>

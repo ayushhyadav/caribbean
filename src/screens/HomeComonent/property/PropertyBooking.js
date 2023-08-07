@@ -87,10 +87,10 @@ export default class PropertyBooking extends Component {
                                             <h6 style={{fontSize:25,fontWeight:'600'}}>$6,695</h6>
                                           </div>
 
-
+                                          
                                         </div>
                                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 15,width:'100%' }}>
-                                        <Link to="/Checkout">  <button style={{ width: '100%', fontSize: 14, height: 45, color:'white',fontSize:18,borderRadius: 10, background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)' }}> Book</button></Link>
+                                        <Link style={{ width:"100%"}} to="/Checkout">  <button style={{ width:"100%", fontSize: 14, height: 45, color:'white',fontSize:18,borderRadius: 10, background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)' }}> Book</button></Link>
                                         </div>
                                       </div>
                                     </div>
