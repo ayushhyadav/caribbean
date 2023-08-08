@@ -20,13 +20,13 @@ export default class RegistrationHeader extends Component {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+                                <a class="nav-link active" aria-current="page" href="/Dashbord">Dashboard</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/booking">Booking History</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Earning</a>
+                                <a class="nav-link" href="/Deshbord">Earning</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/mylisting">My Listing</a>

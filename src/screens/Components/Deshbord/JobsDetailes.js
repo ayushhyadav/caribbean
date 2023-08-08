@@ -58,8 +58,16 @@ export default class JobsDetailes extends Component {
             ))}
            
         </div>
-        <div className="my-calendar" style={{width:'70%'}}>
-      <Calander/>
+        
+        <div className="my-calendar" style={{width:'99%',padding:30}}>
+          <div style={{display:'flex',justifyContent:'space-between'}}>
+          <label style={{fontSize:20,fontWeight:'500'}}>My Availablity Calender</label>
+          <button style={{background: "#DDF96F",fontSize:15,width:65,border:'none',borderRadius:7,fontWeight:'700',color:'#0F172A'}}>Edit</button>
+
+          </div>
+     <div style={{marginTop:10}}>
+     <Calander/>
+     </div>
     </div>
         
   

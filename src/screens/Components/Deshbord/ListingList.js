@@ -11,6 +11,7 @@ export default class ListingList extends Component {
         3,
         4,
         5,
+        6,
         {
           img: require("../../../assets/BgImage.png"),
           title: "Latimer Grand Oaks",

@@ -58,6 +58,7 @@ export default class PersonalInformation extends Component {
   }
 
   render() {
+    console.log('show values ',this.props.Highlight)
     return (
       <div>
         <div>
@@ -77,7 +78,7 @@ export default class PersonalInformation extends Component {
                       height: '2.8125rem',
                       borderRadius: '1.125rem',
                       marginTop: '0.5rem',
-                      backgroundColor: this.props.Highlight.id === data.id ? '#FEF0EC' : '#F1F5F9',
+                      backgroundColor: this.props.Highlight.includes(data.id)? '#FEF0EC' : '#F1F5F9',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -87,7 +88,7 @@ export default class PersonalInformation extends Component {
                       style={{
                         width: '1.25rem',
                         height: '1.25rem',
-                        filter: this.props.Highlight.id === data.id ? 'invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(95%)' : null,
+                        filter: this.props.Highlight.includes(data.id) ? 'invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(95%)' : null,
                       }}
                       src={data.img}
                       alt=""
@@ -102,9 +103,9 @@ export default class PersonalInformation extends Component {
                         marginTop: '0.625rem',
                         border: 'none',
                         borderRadius: '0.625rem',
-                        borderColor: this.props.Highlight.id === data.id ? '#FEF0EC' : '#94A3B8',
+                        borderColor: this.props.Highlight.includes(data.id) ? '#FEF0EC' : '#94A3B8',
                         border: '1px solid',
-                        backgroundColor: this.props.Highlight.id === data.id ? '#F15A29' : '#94A3B8',
+                        backgroundColor: this.props.Highlight.includes(data.id) ? '#F15A29' : '#94A3B8',
                         marginLeft: '-0.25rem',
                       }}
                     ></div>

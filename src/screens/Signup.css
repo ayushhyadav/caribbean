@@ -11,14 +11,16 @@
     align-items: flex-end;
     display: flex;
     width:'50%';
-  
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
 }
 .detail{
- 
-    height: "100%";
-    width:'50%';
+
+    height: 30%;
+    width:100%;
     background-image: linear-gradient(195.42deg, #56BBFF -63.22%, rgba(85, 187, 255, 0.21) -63.2%, #061BEB 87.54%);;
-    
+    background-size: cover;
 }
 .SignuPdetail{
    

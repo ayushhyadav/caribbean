@@ -14,9 +14,21 @@ export default class RegistrationProcess extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ShowComponentId:{navigationTo: 'per_Info', id: 1}
+      ShowComponentId:{navigationTo: 'per_Info', id: 1},
+      selectedIds:[1]
     };
   }
+  handleSelectionMultiple = (id) => {
+    var selectedIds = [...this.state.selectedIds] // clone state
+ 
+    if(selectedIds.includes(id))
+      selectedIds = selectedIds.filter(_id => _id !== id)
+    else 
+      selectedIds.push(id)
+      console.log('show selectd ides ',selectedIds)
+    this.setState({selectedIds})
+    
+ }
   render() {
     // const { otp } = this.state;
     return (
@@ -29,23 +41,23 @@ export default class RegistrationProcess extends Component {
       </div>
       <div style={{display:'flex', padding:20,}}>
         <div style={{width:'25%'}}>
-         <Personalinformation Highlight={this.state.ShowComponentId}/>
+         <Personalinformation Highlight={this.state.selectedIds}/>
          </div>
-         {this.state.ShowComponentId.id ==1?<Information NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==1?<Information NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
          
-         {this.state.ShowComponentId.id ==2?<ProfileUpload NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==2?<ProfileUpload NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
 
-         {this.state.ShowComponentId.id ==3?<OtpInputeFiled NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==3?<OtpInputeFiled NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
 
-         {this.state.ShowComponentId.id ==4?<PassportVarification NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==4?<PassportVarification NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
 
-         {this.state.ShowComponentId.id ==5?<PropertyList NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==5?<PropertyList NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
 
-         {this.state.ShowComponentId.id ==6?<Located NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==6?<Located NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
 
-         {this.state.ShowComponentId.id ==7?<PropertyDetails NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==7?<PropertyDetails NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
 
-         {this.state.ShowComponentId.id ==8?<ExtraService NextCallBack={(value)=>this.setState({ShowComponentId:value})}/>:null}
+         {this.state.ShowComponentId.id ==8?<ExtraService NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
       </div>
      </div>
      
