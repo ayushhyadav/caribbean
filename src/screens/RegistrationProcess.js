@@ -43,21 +43,77 @@ export default class RegistrationProcess extends Component {
         <div style={{width:'25%'}}>
          <Personalinformation Highlight={this.state.selectedIds}/>
          </div>
-         {this.state.ShowComponentId.id ==1?<Information NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===1?<Information NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
          
-         {this.state.ShowComponentId.id ==2?<ProfileUpload NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===2?<ProfileUpload NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
 
-         {this.state.ShowComponentId.id ==3?<OtpInputeFiled NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===3?<OtpInputeFiled NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
 
-         {this.state.ShowComponentId.id ==4?<PassportVarification NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===4?<PassportVarification NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
 
-         {this.state.ShowComponentId.id ==5?<PropertyList NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===5?<PropertyList NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
 
-         {this.state.ShowComponentId.id ==6?<Located NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===6?<Located NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
 
-         {this.state.ShowComponentId.id ==7?<PropertyDetails NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===7?<PropertyDetails NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
 
-         {this.state.ShowComponentId.id ==8?<ExtraService NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>this.handleSelectionMultiple(value.id))}/>:null}
+         {this.state.ShowComponentId.id ===8?<ExtraService NextCallBack={(value)=>this.setState({ShowComponentId:value},()=>{
+          if(value.bt_type ==='Back'){
+            this.handleSelectionMultiple(value.currentid)
+          }
+          else{
+            this.handleSelectionMultiple(value.id)
+          }
+         })}/>:null}
       </div>
      </div>
      

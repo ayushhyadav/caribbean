@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import ClientProfile from '../../Components/ClientProfile'
+import Calander from '../../Components/Deshbord/Calander'
 const Amenities=[
   {
    Item:'Wifi'
@@ -193,16 +194,13 @@ Located in Pacific Palisades, a quiet, laid-back neighbourhood tucked between Sa
        <ul style={{ listStyleType:'none',width:"13%",}}>
 
 <li style={{background:'#F3F4F6',width:'96%',height:40,borderRadius:5,color:'#6B7280',fontSize:14,textAlign:'center', display:'flex',alignItems:'center',justifyContent:'center'}}>{Feature.item}</li>
-
-
-
-       </ul>
-       ))}
+</ul>
+          ))}
 </div>
 </div>
 <div style={{width:'90%',margin:'0 auto'}}>
   <h3>Availablity Calender</h3>
-
+<Calander/>
 </div>
 <div style={{width:'90%',display:'flex',justifyContent:'space-between',margin:'0 auto'}}>
   <label style={{marginTop:20}}>Review</label>

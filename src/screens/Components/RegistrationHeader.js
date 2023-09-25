@@ -22,7 +22,7 @@ export default class RegistrationHeader extends Component {
           <div style={{justifyContent:'flex-end'}} className="collapse navbar-collapse" id="navbar">
             
            
-              <button  className=" me-2 btn btn-outline-dark " type="submit">Become a User</button>
+              <button  className=" me-2 btn btn-outline-dark "style={{marginLeft:10,height:48,background:'none',width:'15%'}}  type="submit">Become a User</button>
 
           </div>
         </div>

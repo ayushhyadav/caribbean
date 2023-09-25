@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RegistrationHeader from './HomeHeader'
+import { Link } from 'react-router-dom'
 
 export default class Checkout extends Component {
   render() {
@@ -84,9 +85,9 @@ export default class Checkout extends Component {
           <label style={{fontSize:'130%',fontWeight:750}}>$6,695</label>
           </div>
           </div>
-         <button style={{border:'1px solid black',width:'92%',marginTop:'3.5%',height:40,border:'none',background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)',color:'#FFFFFF',marginLeft:'3.5%',textAlign:'center',borderRadius:10}}>
+        <Link to='/VarifyBooking'><button style={{border:'1px solid black',width:'92%',marginTop:'3.5%',height:40,border:'none',background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)',color:'#FFFFFF',marginLeft:'3.5%',textAlign:'center',borderRadius:10}}>
 Pay $6,695
-         </button>
+         </button></Link> 
         </div>
         
       <div> 

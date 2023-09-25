@@ -1,39 +1,75 @@
 import React, { Component } from 'react';
+import './User.css'
 
 export default class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: [1, 2, 3, 4, 5]
+      rating: [1, 2, 3, 4, 5],
+      isSmallScreen: false // Track if the screen size is small
     };
   }
 
-  render() {
-    return (
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '40px', height: "120px", }}>
-        <div style={{ width: '80%', display: 'flex', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', width: '50%', alignItems: 'center', marginBottom: 20, }}>
-            <img style={{ width: 80, height: 80, borderRadius: 40 }} src={require('../../../assets/Ellipse 11 (1).png')} alt='' />
-            <div style={{ marginLeft: 20, display: 'flex', flexDirection: 'column' }}>
-              <label style={{ fontSize: 23, fontWeight: '700', color: '#0F172A' }}>John Doe</label>
-              <label style={{ color: '#64748B', fontSize: 14, fontWeight: '400' }}>2972 Westheimer Rd. Santa Ana, Illinois 85486</label>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                {this.state.rating.map((val, index) =>
-                  <img key={index} style={{ width: 19, height: 18 }} src={require('../../../assets/Vector(1).png')} alt='' />
-                )}
-                <label style={{ color: '#64748B', fontSize: 17, fontWeight: '600' }}>(200)</label>
-              </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'end', width: '28%', marginBottom: 20 }}>
-              <button style={{ height: 44, width: '75%', fontSize: 15, fontWeight: '600', color: '#0F172A', border: '1px solid', borderColor: '#0F172A', alignItems: 'center', justifyContent: 'center' }} className="me-2 btn btn-outline-dark" type="submit">View Location</button>
-            </div>
-          </div>
+  componentDidMount() {
+    // Check if the screen size is small when the component mounts
+    this.checkScreenSize();
+    // Add a listener to handle screen size changes
+    window.addEventListener('resize', this.checkScreenSize);
+  }
 
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <button style={{ height: 50, borderRadius: 10, fontSize: 18, width: 130, fontWeight: '600', backgroundColor: 'black', color: 'white' }} className="me-2 btn btn-outline-dark" type="submit">
-              Message
-            </button>
+  componentWillUnmount() {
+    // Remove the listener when the component is unmounted
+    window.removeEventListener('resize', this.checkScreenSize);
+  }
+
+  // Function to check if the screen size is small
+  checkScreenSize = () => {
+    this.setState({ isSmallScreen: window.innerWidth <= 768 }); // Adjust the breakpoint as needed
+  };
+
+  render() {
+    const { isSmallScreen } = this.state;
+    return (
+      <div className={`user-card ${isSmallScreen ? 'small-screen' : ''}`}>
+        <div className="user-info">
+          <img className="user-image" src={require('../../../assets/Ellipse 11 (1).png')} alt='' />
+          <div className="user-details">
+            <label className="user-name">John Doe</label>
+            <label className="user-address">2972 Westheimer Rd. Santa Ana, Illinois 85486</label>
+            <div className="user-ratings">
+              {this.state.rating.map((val, index) =>
+                <img key={index} className="star-rating" src={require('../../../assets/Vector(1).png')} alt='' />
+              )}
+              <label className="rating-count">(200)</label>
+            </div>
+           
           </div>
+          <div className="buttons-row">
+          {isSmallScreen ? (
+            <div className="small-screen-image-container">
+              <img className="small-screen-image" src={require('../../../assets/icons8-location-94.png')} alt='' />
+            
+            </div>
+          ) : (
+            <div className="button-container">
+              <button style={{width:'170px',height:53}} className="view-location-button">View Location</button>
+             
+            </div>
+          )}
+        </div>
+        </div>
+        <div className="buttons-row">
+          {isSmallScreen ? (
+            <div className="small-screen-image-container">
+              {/* <img className="small-screen-image" src={require('../../../assets/icons8-location-94.png')} alt='' /> */}
+              <img style={{marginTop:'10px'}} className="small-screen-image" src={require('../../../assets/icons8-message-48.png')} alt='' />
+            </div>
+          ) : (
+            <div className="button-container">
+              {/* <button className="view-location-button">View Location</button> */}
+              <button className="message-button">Message</button>
+            </div>
+          )}
         </div>
       </div>
     );

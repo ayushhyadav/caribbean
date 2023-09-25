@@ -37,7 +37,7 @@ export default class HomeHeader extends Component {
                     <div style={{ justifyContent: 'flex-end', }} class="collapse navbar-collapse" id="navbarSupportedContent">
                     <Link to='/Message'>   <img src={require('../../assets/sms.png')} alt=''/></Link>
                         <img style={{marginLeft:15}} src={require('../../assets/notification.png')} alt=''/>
-                       <Link to='/Registration'> <button style={{marginLeft:15,height:48}} class=" me-2 btn btn-outline-dark " type="submit">Become a User</button></Link>
+                       <Link to='/Registration'> <button style={{marginLeft:10,height:48,background:'none'}} class=" me-2 btn btn-outline-dark " type="submit">Become a Host</button></Link>
                       <Link to='/Signup'> <button style={{marginLeft:15,height:48,width:'130%',border:'none',borderRadius:11,color:'white',background: 'linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%)'}} class=" me-2 btn btn-outline-dark " type="submit">Signup</button></Link> 
                         
 

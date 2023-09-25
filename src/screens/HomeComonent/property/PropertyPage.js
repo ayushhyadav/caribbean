@@ -3,7 +3,7 @@ import HomeHeader from '../HomeHeader'
 import Image from './Image'
 import UserDetails from './UserDetails'
 import PropertyBooking from './PropertyBooking'
-import { flexbox } from '@mui/system'
+
 export default class PropertyPage extends Component {
   render() {
     return (

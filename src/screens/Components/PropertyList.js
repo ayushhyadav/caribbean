@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import InputeFiled from './InputeFiled'
+// import InputeFiled from './InputeFiled'
 const Data=[
     {
         title:' Select View'
@@ -55,7 +55,7 @@ export default class PropertyList extends Component {
             </div>
        </div>
      
-       <div style={{display:'flex',marginTop:15,justifyContent:'space-between',width:'84%',marginTop:25}}>
+       <div style={{display:'flex',justifyContent:'space-between',width:'84%',marginTop:25}}>
       
        <div style={{width:'50%'}}>
                 <label style={{color:'#474554'}}>Property Type</label><br/>
@@ -86,7 +86,7 @@ export default class PropertyList extends Component {
        </div>
        
                
-    <div style={{display:'flex',marginTop:15,justifyContent:'space-between',width:'95%',marginTop:25}} >
+    <div style={{display:'flex',justifyContent:'space-between',width:'95%',marginTop:25}} >
     <div style={{width:'33%'}}>
                 <label style={{color:'#474554',fontSize:17}}>How many Guest You can Accomdate</label><br/>
                 <input style={{width:'93%',height:45,borderWidth:0.1,marginTop:5,borderColor:'#E2E8F0',borderRadius:7}} secureTextEntry={true} placeholder='' />
@@ -111,10 +111,10 @@ export default class PropertyList extends Component {
         </div>
         <div style={{display:'flex', marginTop:30,alignItems:'center',justifyContent:'flex-end'}}>
        <button style={{width:'10%',borderRadius:10,height:'45px',borderWidth:0,background:'white' }}
-       onClick={()=>this.props.NextCallBack({navigationTo:'List_property',id:4})}
+       onClick={()=>this.props.NextCallBack({navigationTo:'List_property',id:4,currentid:5,bt_type:'Back'})}
        >Back</button>
                     <button style={{color:'white',background:'#F15A29',width:'10%',borderRadius:10,height:'50px',marginLeft:10 }}
-                     onClick={()=>this.props.NextCallBack({navigationTo:'property_Location',id:6})}
+                     onClick={()=>this.props.NextCallBack({navigationTo:'property_Location',id:6,bt_type:'Next'})}
                     >Next</button>
                     </div>
      

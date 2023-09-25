@@ -38,7 +38,7 @@ export default class RegistrationHeader extends Component {
                     <div style={{ justifyContent: 'flex-end', }} class="collapse navbar-collapse" id="navbarSupportedContent">
                      <Link to='/ClientProfile' >  <img src={require('../../../assets/sms.png')} alt=''/></Link> 
                         <img style={{marginLeft:15}} src={require('../../../assets/notification.png')} alt=''/>
-                        <button style={{marginLeft:15,height:48}} class=" me-2 btn btn-outline-dark " type="submit">Become a User</button>
+                      <Link to='/'> <button style={{marginLeft:15,height:48}} class=" me-2 btn btn-outline-dark "  type="submit">Become a User</button></Link> 
                         
 
                     </div>

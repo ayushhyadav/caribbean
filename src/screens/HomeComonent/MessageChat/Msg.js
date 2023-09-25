@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 const Data = [
@@ -7,7 +8,7 @@ const Data = [
     date: '11/20/2020',
     desc: 'Lorem ipsum dolor sit amet, coec...',
   },
-
+  
   {
     img: require('../../../assets/Ellipse 33 (2).png'),
     title: 'Wade Warren',
@@ -46,7 +47,7 @@ export default class Message extends Component {
 
   render() {
     return (
-      <div style={{width:'20%',marginTop:10}}>
+      <div style={{width:'20%',marginTop:10 ,}}>
         <div style={{display:'flex',justifyContent:"space-between"}}>
             <label>
                 Search
@@ -61,12 +62,12 @@ export default class Message extends Component {
         <div style={{display:"flex" , flexDirection:"row" , }}>
         <img style={{marginLeft:"5%" , marginTop:"5%"}} src={data.img} alt=''/>
 
-        <div style={{marginTop:"6%" ,marginLeft:"1%" , fontWeight:"600" , fontSize:"16px"}} >  {data.title}  </div>
+        <div style={{marginTop:"6%" ,marginLeft:"2%" , fontWeight:"600" , fontSize:"16px"}} >  {data.title}  </div>
         <div style={{fontWeight:"400" , fontSize:"12px", marginTop:"6.4%" , marginLeft:"7%" , color:"#64748B"}}>  {data.date} </div>
         
 </div>
 
-        <div style={{fontWeight:"400" , fontSize:"14px" , color:"#64748B" , marginLeft:"11%" , marginTop:"-2%"}}>  {data.desc}</div>
+        <div style={{fontWeight:"400" , fontSize:"14px" , color:"#64748B" , marginLeft:"20%" , marginTop:"-2%"}}>  {data.desc}</div>
 
  </div>
      ))}

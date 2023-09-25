@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./List.css";
+import { Link } from "react-router-dom";
 
 export default class ListingList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+    
       data: [
         1,
         2,
@@ -12,6 +14,7 @@ export default class ListingList extends Component {
         4,
         5,
         6,
+
         {
           img: require("../../../assets/BgImage.png"),
           title: "Latimer Grand Oaks",
@@ -27,7 +30,7 @@ export default class ListingList extends Component {
       <div className="container">
         <div className="header">
           <label className="title">Listings</label>
-          <button className="add-property-button">Add New Property</button>
+         <Link to='/AddProperty' ><button className="add-property-button">Add New Property</button></Link>
         </div>
         <div className="grid-container">
           {this.state.data.map((val, index) => (
@@ -67,3 +70,5 @@ export default class ListingList extends Component {
     );
   }
 }
+
+

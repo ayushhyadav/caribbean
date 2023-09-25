@@ -69,7 +69,7 @@ export default class Information extends Component {
             alignItems: 'center',
             justifyContent: 'flex-end',
           }}
-          onClick={() => this.props.NextCallBack({ navigationTo: 'Upload_Profile', id: 2 })}
+          onClick={() => this.props.NextCallBack({ navigationTo: 'Upload_Profile', id: 2,type:'Next' })}
         >
           <button
             style={{

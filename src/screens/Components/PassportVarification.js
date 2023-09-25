@@ -64,11 +64,11 @@ export default class PassportVerification extends Component {
             }}
           >
             <button style={{ width: '9%', border: 'none', background: 'white' }}
-            onClick={()=>this.props.NextCallBack({navigationTo:'Veri_Phone',id:3})}
+            onClick={()=>this.props.NextCallBack({navigationTo:'Veri_Phone',id:3,currentid:4,bt_type:'Back'})}
             >Back</button>
 
             <button style={{ color: 'white', background: '#F15A29', width: '10%', borderRadius: 10, height: '45px' }}
-            onClick={()=>this.props.NextCallBack({navigationTo:'List_property',id:5})}
+            onClick={()=>this.props.NextCallBack({navigationTo:'List_property',id:5,bt_type:'Next'})}
             >
               Next
             </button>

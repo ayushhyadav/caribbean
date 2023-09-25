@@ -1,0 +1,149 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0; 
+     box-sizing: border-box;
+ } 
+  
+  /* body {
+    font-family: Arial, sans-serif;
+  }
+   */
+  .booking-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 2vh;
+    background: none;
+    min-height: 10vh;
+    /* background-color: #f4f4f4; */
+  }
+  
+  .booking-content {
+    background-color: white;
+    width: 90%;
+    min-height: 85vh;
+    height: 85vh;
+    max-width: 400px;
+    /* margin-top: 25px; */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1.5px groove #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .price-label {
+    color: #F15A29;
+    font-size: 29px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  .night-label {
+    margin-top: 5px;
+  }
+  
+  .input-group {
+    margin-top: 30px;
+  }
+  
+  .input-group label {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .date-input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #D1D5DB;
+    margin-top: 5px;
+    height: 45px;
+    border-radius: 10px;
+    color: #9CA3AF;
+    font-size: 16px;
+  }
+  
+  .date-input::-webkit-inner-spin-button,
+  .date-input::-webkit-calendar-picker-indicator {
+    /* display: none; */
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .service-options {
+    margin-top: 20px;
+  }
+  
+  /* Styles for the service list */
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Styles for each service item */
+  .service-item {
+    color: #FFFFFF;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    background-color: var(--text-bg-color); /* Default background color */
+  }
+  
+  /* Optional: Adjust the background color based on text size */
+  .service-item.large {
+    --text-bg-color: red; /* Adjust the color for large text */
+  }
+  
+  .service-item.medium {
+    --text-bg-color: green; /* Adjust the color for medium text */
+  }
+  
+  .service-item.small {
+    --text-bg-color: blue; /* Adjust the color for small text */
+  }
+  
+  
+  
+  .billing {
+    margin-top: 20px;
+  }
+  
+  .billing-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .subtotal-amount {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .book-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* width: 100%; */
+  }
+  
+  button {
+    width: 100%;
+    font-size: 18px;
+    height: 45px;
+    color: white;
+    border-radius: 10px;
+    background: linear-gradient(95.31deg, #56BBFF 1.59%, #55BBFF 1.6%, #061BEB 97.36%);
+  }
+  

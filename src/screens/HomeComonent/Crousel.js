@@ -56,6 +56,50 @@ export default class Crousel extends Component{
                 img: require('../../assets/trinidad and tobago.png'),
                 title:'Trinidad',
               },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
+              {
+                img: require('../../assets/trinidad and tobago.png'),
+                title:'Trinidad',
+              },
               
             ]
         }
@@ -69,8 +113,8 @@ export default class Crousel extends Component{
     
     
         return(
-           <div style={{ height:'100%',width:'100%',}}>
-            <div style={{display:'flex', width:'90%',justifyContent:'space-between',alignItems:'center',margin:'0 auto',marginTop:10}}>
+           <div style={{ height:'100wv',width:'100wv',}}>
+            <div style={{display:'flex', width:'90%',justifyContent:'space-between',alignItems:'center',margin:'0 auto',marginTop:10,overflowX:'scroll',padding:'5 auto'}}>
             {this.state.list.map((list) => (
                     <div style={{flexDirection:'column',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
                     <img style={{width: 35,  height: 35,}}
@@ -89,22 +133,36 @@ export default class Crousel extends Component{
             </div>
             
 
-<div style={{position:'relative',justifyContent:'center',display:'flex'}}>
+<div style={{position:'relative',justifyContent:'center',display:'flex',minHeight:'90vh',width:'100%'}}>
    
 <img style={{width:'100%'}} src={require('../../assets/Rectangle1.png')} alt=""/>
      
 
-<div  style={{position: 'absolute',width:'80%', bottom: '38%' }}>
+<div  style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', overflow: 'hidden' }}>
 <h1 style={{color:'#FFFFFF',fontSize:50, }}>A Free Mind To your Journey<br/> 
              </h1>
                 
  <div style={{backgroundColor: '#FFFFFF',width:'100%',height:90,display:'flex',borderRadius:10,justifyContent:'center',marginTop:20}}>         
 <div style={{width:'97%',display:'flex',alignItems:'center' ,justifyContent:'space-between',marginTop:10}}>
     <div>
-        <span>Select Carribean Country</span>
+        <span>Select Caribbeaneaze Country</span>
         <div style={{display:'flex'}}>
             <img style={{width:23,height:23}} src={require('../../assets/Country.png')} alt=""/>
-            <h5>Antigua</h5>
+            
+            <select style={{color:'black',width:140, fontSize:21,fontWeight:'500',border:'none',background:'none'}}>
+              <option>Antigua</option>
+              <option>Antigua</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <span>Tropical Contries</span>
+        <div style={{display:'flex'}}>
+            <img style={{width:34,height:34}} src={require('../../assets/download (2).jpeg')} alt=""/>
+            <select style={{color:'black',width:100, fontSize:21,fontWeight:'500',border:'none',background:'none'}}>
+              <option>India</option>
+              <option>India</option>
+            </select>
         </div>
     </div>
     <div>
@@ -112,9 +170,18 @@ export default class Crousel extends Component{
         <h5>Anywhere</h5>
     </div>
     <div>
-    <span>Select Property Type</span>
-    <h5>Localeaze
-    </h5>
+    <span>Select Property Type</span><br/>
+    <select style={{color:'black',width:140, fontSize:21,fontWeight:'500',border:'none',background:'none'}}>
+      <option style={{width:170,border:'none',background:'none'}}>
+      Localeaze
+      </option>
+      <option style={{width:170,border:'none',background:'none',opacity:"0.1"}}>
+        Middleaze
+      </option>
+      <option style={{width:170,border:'none',background:'none'}}>
+        Higheaze
+      </option>
+    </select>
     </div>
     <div>
     <span>Person</span>

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export default class Secondscreen extends Component {
   render() {
     return (
-      <div style={{width:'75%',display:'flex',flexDirection:'column',justifyContent:'center',margin:'0 auto',border:'1px solid',alignItems:'center'}}>
+      <div style={{width:'75%',display:'flex',flexDirection:'column',justifyContent:'center',margin:'0 auto',alignItems:'center'}}>
         <div style={{display:'flex', justifyContent:'space-between',width:'95%', Margin:'0 auto'}}>
             <div style={{width:'35%',}}>
                 <label style={{color:'#000000',fontSize:20}}>Jane Cooper</label><br/>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import FileBrowser from './FileBrowser'
+import { Link } from 'react-router-dom'
 const Amenities=[
     {
      Item:'Wifi'
@@ -54,6 +55,14 @@ const Amenities=[
     item:'Breakfast'
   },
   
+ 
+  
+]
+const img=[
+    {
+      img: require('../../assets/plus.png'),
+    }
+
   ]
 export default class ExtraService extends Component {
   render() {
@@ -71,10 +80,7 @@ export default class ExtraService extends Component {
        <ul style={{ listStyleType:'none',padding:0,margin:0, width:'15%',alignItems:'center',textAlign:'center',display:'flex',justifyContent:'center'}}>
 
 <li style={{background:'#F3F4F6',width:'90%',height:45,borderRadius:5,textAlign:'center',color:'#6B7280',fontSize:15,display:'flex',alignItems:'center',justifyContent:'center'}}>{Amenities.Item}</li>
-
-
-
-       </ul>
+</ul>
        ))}
 </div>
 <div style={{display:'flex',marginTop:20,}}>
@@ -91,18 +97,28 @@ export default class ExtraService extends Component {
         <label  style={{fontSize:20,fontWeight:'550'}}>
         Extra Service
         </label>
-        <div style={{display:'flex',width:'80%',marginTop:10}}>
+       <div style={{display:'flex',}}> <div style={{display:'flex',width:'60%',marginTop:10}}>
 {Extra.map((Extra) => (
-       <ul style={{ listStyleType:'none',padding:0,margin:0, width:'13%',alignItems:'center',textAlign:'center',display:'flex',justifyContent:'center'}}>
+       <ul style={{ listStyleType:'none',padding:0,margin:0, width:'100%',alignItems:'center',textAlign:'center',display:'flex',justifyContent:'center'}}>
 
 <li style={{background:'#F3F4F6',width:'80%',height:45,borderRadius:5,textAlign:'center',color:'#6B7280',fontSize:16,display:'flex',alignItems:'center',justifyContent:'center'}}>
   {Extra.item}</li>
-
+ 
+  {/* <li style={{border:'none',background:'none'}}>
+  <img
+                      style={{ width:35,height:35}}
+                      src={Extra.img}
+                      alt=""
+                    />
+  </li> */}
+  
 
 
        </ul>
+       
        ))}
-</div>
+      
+</div> <img style={{width:40,height:40,marginLeft:50,marginTop:10}} src={require('../../assets/plus.png')}/></div>
         </div>
         <div style={{padding:20}}>
         <label style={{borderTop:'1px solid',borderColor:'#E2E8F0',marginTop:20 ,width:'90%',fontSize:18,fontWeight:'600'}}>Rafting</label><br/>
@@ -139,7 +155,7 @@ export default class ExtraService extends Component {
 
         </div>
         <label style={{marginTop:15,color:'#474554',width:'55%',fontSize:15}}>Exotic Food  Description</label><br/>
-                <textarea style={{width:'55%',padding:5,color:'#94A3B8',height:90,borderColor:'#E2E8F0',borderRadius:10,padding:10}} id="freeform" name="freeform" rows="4" cols="50">
+                <textarea style={{width:'55%',color:'#94A3B8',height:90,borderColor:'#E2E8F0',borderRadius:10,padding:10}} id="freeform" name="freeform" rows="4" cols="50">
                 Enter your Property Descroption
 </textarea><br/>
 <FileBrowser  title={'Upload Certifcate'}/>
@@ -148,9 +164,9 @@ export default class ExtraService extends Component {
         </div>
         <div style={{display:'flex', marginTop:'1%',alignItems:'center',justifyContent:'flex-end'}}>
        <button style={{width:'10%',borderRadius:10,height:'45px',borderWidth:0,background:'white' }}
-         onClick={()=>this.props.NextCallBack({navigationTo:'Extra_Service',id:7})}
+         onClick={()=>this.props.NextCallBack({navigationTo:'Extra_Service',id:7,currentid:8,bt_type:'Back'})}
            >Back</button>
-                    <button style={{color:'white',background:'#F15A29',width:'10%',borderRadius:10,height:'45px',marginLeft:10 }}>Finish</button>
+                 <Link style={{width:'10%'}}to="/Deshbord">   <button style={{color:'white',background:'#F15A29',borderRadius:10,height:'45px',marginLeft:10 }}>Finish</button></Link>
                     </div>
         </div>
         </div>

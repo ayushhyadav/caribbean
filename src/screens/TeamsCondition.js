@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 
 export default class TeamsCondition extends Component{
     constructor(props){
@@ -59,7 +60,7 @@ export default class TeamsCondition extends Component{
          
                     </div>
                    <div style={{display:'flex',flexDirection:'row', marginTop:'1%',alignItems:'center',justifyContent:'flex-end'}}> <button style={{width:'9%',border:'none',background:'white' }}>Decline</button>
-                    <button style={{color:'white',background:'#F15A29',width:'9%',borderRadius:4,height:35 }}>Accept All</button>
+                  <NavLink style={{width:'10%'}} to='/'> <button style={{color:'white',background:'#F15A29',borderRadius:4,height:35 }}>Accept All</button></NavLink> 
                     </div>
                     </div>
                 

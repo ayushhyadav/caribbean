@@ -9,7 +9,7 @@ import './Home.css'
 export default class Home extends Component {
   render() {
     return (
-      <div style={{width:'100%',height:'100%'}}>
+      <div style={{width:'100vw',height:'vw'}}>
         <HomeHeader/>
         <Crousel/>
         <ScrollDestination/>
