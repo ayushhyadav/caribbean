@@ -105,9 +105,6 @@ export default class Crousel extends Component{
         }
             
         }
-        
-    
-
 
         render(){
     

@@ -104,7 +104,7 @@ export default class PersonalInformation extends Component {
                         border: 'none',
                         borderRadius: '0.625rem',
                         borderColor: this.props.Highlight.includes(data.id) ? '#FEF0EC' : '#94A3B8',
-                        border: '1px solid',
+                        // border: '1px solid',
                         backgroundColor: this.props.Highlight.includes(data.id) ? '#F15A29' : '#94A3B8',
                         marginLeft: '-0.25rem',
                       }}

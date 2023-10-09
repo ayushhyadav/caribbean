@@ -29,23 +29,34 @@ export default class ScrollDestination extends Component {
           img: require('../../assets/Ecotourism.jpeg'),
           title: 'Ecotourism'
         },
-        {
-          img: require('../../assets/Ecotourism.jpeg'),
-          title: 'Ecotourism'
-        },
-        {
-          img: require('../../assets/Ecotourism.jpeg'),
-          title: 'Ecotourism'
-        },
-        {
-          img: require('../../assets/Ecotourism.jpeg'),
-          title: 'Ecotourism'
-        },
+        
       ],
       currentIndex: 0,
       visibleImages: 5,
     };
   }
+
+
+  componentDidMount() {
+  
+    window.addEventListener('resize', this.handleWindowResize);
+    this.handleWindowResize();
+  }
+
+  componentWillUnmount() {
+  
+    window.removeEventListener('resize', this.handleWindowResize);
+  }
+
+  handleWindowResize = () => {
+   
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+      this.setState({ visibleImages: 1 }); 
+    } else {
+      this.setState({ visibleImages: 5 });
+    }
+  };
 
   handlePrevClick = () => {
     this.setState((prevState) => ({
@@ -69,7 +80,9 @@ export default class ScrollDestination extends Component {
         <div style={{ width: '85%' }}>
           <h1>Most popular Caribbean destinations</h1>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 25, width: '100%' }}>
-            <button style={{ width: 20 }} onClick={this.handlePrevClick}>Previous</button>
+            <button style={{ width: 60,height:60,background:'white',borderRadius:30 }} onClick={this.handlePrevClick}>
+
+            </button>
             {list.slice(currentIndex, currentIndex + visibleImages).map((item, index) => (
               <div
                 key={index}
@@ -90,7 +103,7 @@ export default class ScrollDestination extends Component {
                 <label style={{ position: 'absolute', color: 'white', fontSize: 28, fontWeight: '600' }}>{item.title}</label>
               </div>
             ))}
-            <button style={{ width: 20 }} onClick={this.handleNextClick}>Next</button>
+            <button style={{ width: 60,height:60,background:'white',borderRadius:30, }} onClick={this.handleNextClick}>Next</button>
           </div>
         </div>
       </div>

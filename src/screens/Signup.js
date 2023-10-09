@@ -16,7 +16,7 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [dob, setDob] = useState("");
   const [confirm_password, setConfirm_password] = useState("");
-
+  // const [userId, setUserId] = useState(null);
   const SignupFun = () => {
     console.log('base url  ', BaseUrl.BaseUrl);
     let data = {
@@ -26,13 +26,14 @@ export default function Signup() {
       password: password,
       dob: dob,
       confirm_password:confirm_password
+
     };
 
     fetch(BaseUrl.BaseUrl + '/auth/signup', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json', // Changed content type
+        'Content-Type': 'application/json', 
       },
     })
       .then((response) => response.json())
@@ -40,7 +41,11 @@ export default function Signup() {
         if (responseJson?.error) {
           alert(JSON.stringify(responseJson?.error));
         } else {
+                  
           console.log(responseJson);
+          
+          localStorage.setItem('token', responseJson.authToken)
+          localStorage.setItem('token', responseJson.user_id)
           navigate('/Login')
         }
       })
